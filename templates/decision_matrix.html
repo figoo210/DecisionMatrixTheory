@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <title>Decision Matrix</title>
+</head>
+<body>
+    <h1>Decision Matrix Claculator</h1>
+
+    <div class="container">
+        <form class="center" method="post">
+            <table class="dm-table">
+                <!--*************************************  Table Head    *************************************-->
+                <thead >
+                    <!--*********************************  Weight Row    *************************************-->
+                    <tr class="weight" id="weightBody" >
+                        <td>Weight</td>
+                        <td><input class="weight_input dm-input" type="number" placeholder="" name="weight-0"></td>
+                    </tr>
+
+                    <!--*********************************  Factors Row   *************************************-->
+                    <tr class="factors" id="factors">
+                        <td>Factor / Alternatives</td>
+                        <td><input class="factor_input dm-input" type="text" placeholder="factor 1" name="factor-0"></td>
+                    </tr>
+                </thead>
+
+
+
+                <!--*************************************  Table Body  *************************************-->
+                <tbody id="body">
+                    <tr id="myRow">
+                        <td><input class="alternatives_input dm-input" type="text" placeholder="Alternative 1" name="title-0"></td>
+                        <td><input id="existInput" type="number" class="dm-input" name="index-0-0"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" onclick="insertRow()" class="btn btn-row">Add Row</button>
+            <button type="button" onclick="insertColumn()" class="btn btn-column">Add Column</button>
+            <button type="submit" class="btn btn-calculate">Calculate</button>
+
+
+        </form>
+
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <a class="home-btn" href="/">Home</a>
+
+    <script src="{{ url_for('static',filename='js/script2.js') }}"></script>
+</body>
+</html>

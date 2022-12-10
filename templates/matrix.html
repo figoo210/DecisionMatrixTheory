@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <title>Decision Theory</title>
+</head>
+<body>
+    <h1>Decision Theory Claculator</h1>
+    <div class="inputTableCreation">
+        <h2>Enter number of rows</h2>
+        <input class="inputStyle" type="number" id="rows" >
+        <h2>Enter number of columns</h2>
+        <input class="inputStyle" type="number" id="columns">
+        <br>
+        <br>
+        <button class="home-btn" id="button" type="submit">Create Table</button>
+    </div>
+    <br>
+    <form method="post" id="tableForm">
+        <div class="table hide" id="table"></div>
+        <br/>
+        <br/>
+        <div id="calculate-group" class="hide">
+            <input id="alpha" class="inputStyle2" type="number" step="0.01" placeholder="Alpha for Criterion of Realism" name="alpha" >
+            <br/>
+            <br/>
+            <button type="submit" class="calcBtn">Maximax</button>
+            <button type="submit" class="calcBtn">Maximin</button>
+            <button type="submit" class="calcBtn" id="alpha-btn">Criterion of Realism</button>
+            <button type="submit" class="calcBtn">Equally likely</button>
+            <br/>
+            <br/>
+            <button id="regenerate" class="linkBtn">Regenerate Table</button>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </form>
+
+    <a class="home-btn" href="/">Home</a>
+
+
+    <script src="{{ url_for('static',filename='js/script1.js') }}"></script>
+</body>
+</html>
